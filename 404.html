@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 · JVGC Studio</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .nf {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 16px;
+      padding: 0 var(--container-pad);
+    }
+    .nf__num {
+      font-size: 96px;
+      font-weight: 800;
+      letter-spacing: -3px;
+      background: var(--grad-warm);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    @supports not ((background-clip: text) or (-webkit-background-clip: text)) {
+      .nf__num {
+        background: none !important;
+        -webkit-text-fill-color: var(--text-primary) !important;
+        color: var(--text-primary) !important;
+      }
+    }
+    .nf__msg { font-size: 20px; color: var(--text-secondary); }
+    .nf__back {
+      margin-top: 16px;
+      background: var(--text-primary);
+      color: var(--bg);
+      padding: 14px 28px;
+      border-radius: 99px;
+      font-weight: 600;
+    }
+    .nf__back:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="nf">
+    <div class="nf__num">404</div>
+    <div class="nf__msg">No game here. Maybe try the home page?</div>
+    <a class="nf__back" href="/JvgcGameStudio/">Back to home</a>
+  </div>
+</body>
+</html>
